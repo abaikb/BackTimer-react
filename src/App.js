@@ -8,7 +8,7 @@ const CountdownTimer = () => {
     hours: 0,
     minutes: 0,
     seconds: 0,
-  });
+  })
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -29,12 +29,9 @@ const CountdownTimer = () => {
         setTimeRemaining({ days: 0, hours: 0, minutes: 0, seconds: 0 });
        
       }
-    }, 1000);
-    // if (seconds < 10) {
-    //   seconds = `0${seconds}`
-    // }
+    }, 1000)
 
-    return () => clearInterval(intervalId);
+    return () => clearInterval(intervalId)
   }, []);
 
   return (
@@ -61,7 +58,7 @@ const CountdownTimer = () => {
         </div>
       )}
       {timeRemaining.seconds !== 0 && (
-        <div className='parent'>
+        <div id='second' className='parent'>
           <div className='numbers'>{timeRemaining.seconds > 9 ? timeRemaining.seconds : `0${timeRemaining.seconds}`} </div>
           <div className='n-text'>seconds</div>
         </div>
@@ -71,7 +68,7 @@ const CountdownTimer = () => {
 
      
     </div>
-  );
-};
+  )
+}
 
 export default CountdownTimer;
