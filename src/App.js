@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css'
 
 const CountdownTimer = () => {
-  const endDate = new Date('05/13/2023 12:00 PM').getTime();
+  const endDate = new Date('12/13/2023 12:00 PM').getTime();
   const [timeRemaining, setTimeRemaining] = useState({
     days: 0,
     hours: 0,
@@ -20,10 +20,10 @@ const CountdownTimer = () => {
         const hours = Math.floor(
           (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
         );
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000)
 
-        setTimeRemaining({ days, hours, minutes, seconds });
+        setTimeRemaining({ days, hours, minutes, seconds })
       } else {
         clearInterval(intervalId);
         setTimeRemaining({ days: 0, hours: 0, minutes: 0, seconds: 0 });
